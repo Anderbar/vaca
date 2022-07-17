@@ -153,6 +153,50 @@ nav li a:hover:not(.active) {
 
 /*Submit Button CSS*/
 
-#submit-button{
+#submit-button {
 	text-align: center;
+}
+
+/*Trip Details CSS*/
+
+#trip-details-header {
+	margin: 40px 0px 40px 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#trip-details div {
+	margin: 0 20px;
+}
+
+#trip-details h1 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#trip-details button {
+	display: block;
+	margin: 0 auto;
+}
+
+#trip-details img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%; 
+	max-height: auto;
+}
+
+#flight-details {
+	float: left;
+	width: calc(100% / 3 - 40px);
+}
+
+#hotel-details {
+	display: inline-block;
+	width: calc(100% / 3 - 40px);
+}
+
+#attraction-details {
+	float: right;
+	width: calc(100% / 3 - 40px);
 }
