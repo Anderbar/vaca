@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./src/vaca.css" type="text/css" />
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+			crossorigin="anonymous"></script>
+
+		<title>Input criteria for your vacation</title>
+	</head>
+
+	<nav>
+		<ul>
+			<li><a href="index.html"><img src="images/vaca.jpg" height="70"></a></li>
+			<li style="float: right; margin-top: 20px; padding-right: 16px;"><a href="#">Sign In</a></li>
+			<li style="float: right; margin-top: 20px"><a href="about.html">About</a></li>
+			<li style="float: right; margin-top: 20px;"><a href="index.html">Home</a></li>
+		</ul>
+	</nav>
+
+	<body>
+		<header id="travel">
+			<p style="margin-bottom: 8px"><b>Looking to travel on a budget?</b></p>
+			<p style="margin-bottom: 0px;">Insert the information below and we'll find something that works!</p>
+		</header>
+
+		<form>
+			<div id="initial-criteria">
+				<table>
+					<tr>
+						<th>Budget</th>
+						<th>Departure</th>
+						<th>Return</th>
+						<th>Starting Location</th>
+					</tr>
+					<tr>
+						<td><input id="budget" type="number" name="budget" min="50" step="50" placeholder="Multiple of $50"></td>
+						<td><input id="departure" type="date" name="departure"></td>
+						<td><input id="return" type="date" name="return"></td>
+						<td><input id="starting_location" type="text" name="starting_location" placeholder="Enter your current location"></td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="secondary-criteria">
+				<div>
+					<h1>Please choose your transportation method:</h1>
+					<div class="secondary-criteria-input">
+						<input type="radio" id="car" name="transportation" value="Car">
+						<label for="car">Car</label>
+						<br>
+						<input type="radio" id="plane" name="transportation" value="Plane">
+						<label for="plane">Plane</label>
+					</div>
+				</div>
+
+				<div>
+					<h1>Search Radius in Miles (Optional):</h1>
+					<div class="secondary-criteria-input">
+						<input type="range" name="search_radius">
+					</div>
+				</div>
+
+				<div>
+					<h1>Hotel Rating (Optional):</h1>
+					<div class="secondary-criteria-input">
+						<input type="checkbox" id="one_star" name="hotel">
+						<label for="one_star"><img src="images/one_star.png" height="30"></label>
+						<br>
+						<input type="checkbox" id="two_stars" name="hotel">
+						<label for="two_stars"><img src="images/two_stars.png" height="30"></label>
+						<br>
+						<input type="checkbox" id="three_stars" name="hotel">
+						<label for="three_stars"><img src="images/three_stars.png" height="30"></label>
+						<br>
+						<input type="checkbox" id="four_stars" name="hotel">
+						<label for="four_stars"><img src="images/four_stars.png" height="30"></label>
+						<br>
+						<input type="checkbox" id="five_stars" name="hotel">
+						<label for="five_stars"><img src="images/five_stars.png" height="30"></label>
+					</div>
+				</div>
+			</div>
+		
+			<div id="submit-button">
+				<input type="submit" name="submit">
+			</div>
+		</form>
+	</body>
+</html>
