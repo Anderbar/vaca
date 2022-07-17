@@ -165,3 +165,27 @@
 	#submit-button{
 		text-align: center;
 	}
+
+	#option_alert{
+		display: block;
+		margin-top:15px;
+		background-color: lightpink;
+		font-size: 20px;;
+		padding:5px 5px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+		width: 100%;
+	}
+
+	.carousel-inner img {       
+		display:block;
+		height: auto; 
+		max-width: 100%;
+	 }
+
+
+	 .carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
