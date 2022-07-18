@@ -1,0 +1,179 @@
+#about {
+    padding: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#about_text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#get_started {
+    height: 200px;
+    position: relative;
+}
+
+#btn {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 5%;
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 12px 28px;
+}
+
+#container_sorry {
+    display: block;
+    margin-top: 10%;
+    background-color: lightgreen;
+    font-size: 20px;
+    ;
+    padding: 50px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#go_back {
+    height: 50px;
+    position: relative;
+}
+
+#btn_go_back {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 5%;
+    font-size: 20px;
+}
+
+
+/*div {
+        padding-left: 20px;
+    }
+    label {
+        font-size: 18px;
+    }
+    table {
+        font-size: 20px;
+    }
+    td {
+        font-size: 18px;
+    }*/
+
+
+/*Navigation Bar CSS*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: white;
+}
+
+
+/*Travel Header CSS*/
+
+#travel {
+    padding: 25px 20px;
+    margin: 40px 0px;
+    background-color: lightgrey;
+    font-size: 20px;
+    width: 35%;
+}
+
+
+/*Initial Criteria CSS*/
+
+#initial-criteria {
+    margin: 40px 0px;
+}
+
+#initial-criteria table {
+    margin: auto;
+}
+
+#initial-criteria th {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#initial-criteria td {
+    font-size: 18px;
+}
+
+#initial-criteria th,
+td {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/*Secondary Criteria CSS*/
+
+#secondary-criteria {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+#secondary-criteria div:not(.secondary-criteria-input) {
+    margin: 40px 0px;
+}
+
+#secondary-criteria h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.secondary-criteria-input {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+
+/*Submit Button CSS*/
+
+#submit-button {
+    text-align: center;
+}
