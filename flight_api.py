@@ -49,18 +49,13 @@ def get_api_info(origin, dest, travelers, dep_date, arr_date):
     res = json.loads(response.text)
     ct = 0
     #let API gather data
-    #results should be complete by 20 - 30 seconds
     #can only have 10 requests within a minutes so loop breaks once 30 seconds have passed
     while res["context"]["status"] == "incomplete":
         time.sleep(5)
         ct += 5
-        print(ct)
-        print(res["context"]["status"])
-        print(res["context"]["totalResults"])
-        
         response = requests.request("GET", url, headers=headers, params=querystring)
         res = json.loads(response.text)
-        if ct == 15 or len(res["itineraries"]) != 0:
+        if len(res["itineraries"]) != 0 or ct == 30:
             break
     return res
 
@@ -109,7 +104,7 @@ def find_flight_info(origin, dest, travelers, dep_date, arr_date):
     return all_info
 
 
-dest = "ATL"
+dest = "SFO"
 travelers = "1"
 dep_date = "2022-08-06"
 arr_date = "2022-08-08"
@@ -121,7 +116,6 @@ airport = find_airports(city, state)
 
 print(find_flight_info(airport["name"], dest, travelers, dep_date, arr_date))
 
-##-- total results > 0
     
         
     
