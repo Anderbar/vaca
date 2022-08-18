@@ -1,0 +1,20 @@
+{% extends "layout.html" %} {% block title %}
+<title>Sorry, we couldn't find any match!</title> {% endblock %} {% block nav %}
+<nav>
+    <ul>
+        <li>
+            <a href="/"><img src="/static/vaca.jpg" height="70"></a>
+        </li>
+        <li style="float: right; margin-top: 20px"><a href="/about">About</a></li>
+        <li style="float: right; margin-top: 20px;"><a href="/">Home</a></li>
+    </ul>
+</nav>
+{% endblock %} {% block main %}
+<div id="container_sorry">
+    <p>Sorry, we couldn't find anything that matched to you parameters :(<br> Please try to change some of your parameters!
+
+        <div id="go_back">
+            <a href="/"><button id="btn_go_back"> Go Back to Input Stage </button></a>
+        </div>
+</div>
+{% endblock %}

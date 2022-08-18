@@ -1,0 +1,102 @@
+{% extends "layout.html" %} {% block title %}
+<title>Input your Travel Requirements</title> {% endblock %} {% block nav %}
+<nav>
+    <ul>
+        <li>
+            <a href="/"><img src="/static/vaca.jpg" height="70"></a>
+        </li>
+
+        <li style="float: right; margin-top: 20px"><a href="/about">About</a></li>
+        <li style="float: right; margin-top: 20px;"><a href="/">Home</a></li>
+    </ul>
+</nav>
+{% endblock %} {% block main %}
+
+<header id="travel">
+    <p style="margin-bottom: 8px"><b>Looking to travel on a budget?</b></p>
+    <p style="margin-bottom: 0px;">Insert the information below and we'll find something that works!</p>
+</header>
+<div class="d-flex justify-content-center">
+    <div class="loading" id="loading"></div>
+</div>
+
+<div class="content" id="content">
+    <form method="POST">
+        <div id="initial-criteria">
+            <table>
+                <tr>
+                    <th>Budget</th>
+                    <th>Departure</th>
+                    <th>Return</th>
+                    <th>Starting Location</th>
+                </tr>
+                <tr>
+                    <td><input id="budget" type="number" name="budget" min="50" step="50" placeholder="Multiple of $50"></td>
+                    <td><input id="departure" type="date" name="departure"></td>
+                    <td><input id="return_date" type="date" name="return_date"></td>
+                    <td><input id="starting_location" type="text" name="starting_location" placeholder="Enter your current location"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="secondary-criteria">
+            <div>
+                <h1>Please choose your transportation method:</h1>
+                <div class="secondary-criteria-input">
+                    <input type="radio" id="car" name="transportation" value="Car">
+                    <label for="car">Car</label>
+                    <br>
+                    <input type="radio" id="plane" name="transportation" value="Plane">
+                    <label for="plane">Plane</label>
+                </div>
+            </div>
+
+            <div>
+                <h1>Search Radius in Miles (Optional):</h1>
+
+                <div class="secondary-criteria-input">
+                    <p>The bar defaults to a 50 mile radius at the middle.</p>
+                    <input type="range" name="search_radius">
+                    <p>Drop bar to 0 if no distance preference.</p>
+                </div>
+            </div>
+
+            <div>
+                <h1>Hotel Rating (Optional):</h1>
+                <div class="secondary-criteria-input">
+                    <input type="checkbox" id="one_star" name="one_star">
+                    <label for="one_star">One star</label>
+                    <br>
+                    <input type="checkbox" id="two_stars" name="two_stars">
+                    <label for="two_stars">Two stars</label>
+                    <br>
+                    <input type="checkbox" id="three_stars" name="three_stars">
+                    <label for="three_stars">Three stars</label>
+                    <br>
+                    <input type="checkbox" id="four_stars" name="four_stars">
+                    <label for="four_stars">Four stars</label>
+                    <br>
+                    <input type="checkbox" id="five_stars" name="five_stars">
+                    <label for="five_stars">Five stars</label>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            // <![CDATA[
+            function loading() {
+                document.getElementById("loading").style.display = "block";
+                document.getElementById("content").style.display = "none";
+            }
+            // ]]>
+        </script>
+        <div id="submit-button">
+
+            <input type="submit" name="submit" onclick="loading();">
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

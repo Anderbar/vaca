@@ -1,0 +1,52 @@
+{% extends "layout.html" %} {% block title %}
+<title>Testing</title> {% endblock %} {% block nav %}
+<nav>
+    <ul>
+        <li>
+            <a href="/"><img src="images/vaca.jpg" height="70"></a>
+        </li>
+
+        <li style="float: right; margin-top: 20px"><a href="/about">About</a></li>
+        <li style="float: right; margin-top: 20px;"><a href="/">Home</a></li>
+    </ul>
+</nav>
+{% endblock %} {% block main %}
+<div id="option_container">
+    <div id="option_alert">
+        Here are some options! Click left to view past options. Click right to view new options.
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+        <h1>{{ value }}</h1>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <h2>{{ city_name }}</h2>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <h3>${{ ppn }} per night</h3>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <h3>about {{ miles }} miles away</h3>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <h3>about {{ time }} hours</h3>
+    </div>
+
+    <form action="/nextoption/" method="POST">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Next</button>
+
+    </form>
+
+
+    <form action="/backoption/" method="POST">
+        <button type="button" class="btn btn-secondary btn-lg btn-block">Back</button>
+
+    </form>
+
+</div>
+{% endblock %}
